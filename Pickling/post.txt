@@ -1,0 +1,18 @@
+
+🐍 Pickling 🥫
+
+Pickling is the process of converting a Python object into a byte stream, which can be stored in a file or transmitted over a network. This byte stream can later be unpickled to recreate the original Python object.
+
+👉 Why use pickling?
+
+Pickling is a great way to store and retrieve complex data structures in Python. It allows you to save the state of an object and restore it later, which can be very useful in many scenarios. For example, you can use pickling to:
+
+👉 Save the state of a machine learning model after training, so that you can reuse it later without having to retrain it.
+
+👉 Store user preferences or settings in a file, so that they can be loaded the next time the user runs the program.
+
+👉 Transmit data over a network, by pickling the data on one end and unpickling it on the other end.
+
+👉 How to use pickling in Python?
+
+Python provides a built-in module called "pickle" that can be used for pickling and unpickling objects. 
