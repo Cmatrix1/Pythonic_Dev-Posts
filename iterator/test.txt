@@ -1,0 +1,11 @@
+🐍📢 Hey Python enthusiasts! let's dive into the power of iterators in Python. 🚀
+
+So, what exactly is an iterator? In simple terms, an iterator is an object that can be iterated (looped) over. It represents a stream of data that can be fetched one element at a time, without loading the entire dataset into memory at once.
+
+Look at photo. Consider the task of reading a file, "test.txt," and printing its contents in chunks of 12 characters
+
+in second code, we define a lambda function called method that reads 12 characters from the file each time it's called. By passing this function along with an empty string ("") to iter, we create an iterator that keeps fetching data until an empty string is encountered. The loop then iterates over the iterator, printing each chunk of data.
+
+Using iter with a callable function provides a cleaner and more concise alternative to the while loop. It encapsulates the logic of reading chunks inside method, making our code more readable and maintainable.
+
+Happy coding! 🎉💻
