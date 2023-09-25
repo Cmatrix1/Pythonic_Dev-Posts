@@ -1,0 +1,7 @@
+vars() Function In Python
+
+In Python, vars() is a built-in function that returns the __dict__ attribute of an object. This attribute is a dictionary containing the object's attributes and their values. In other words, vars() returns a dictionary of the object's namespace. 🤯
+
+In conclusion, vars() is a useful method in Python
+ that can help you inspect the attributes and values of an object. I 
+hope you found this post helpful! 😊
