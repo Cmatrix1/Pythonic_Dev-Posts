@@ -1,0 +1,11 @@
+`JSONDecoder` Class In Python
+
+🤔 First, let's understand what the `JSONDecoder` class does. It is a class in the `json` module that is used to decode JSON data into Python objects. By default, it can decode JSON data into Python dictionaries, lists, strings, numbers, booleans, and `None`. However, sometimes we may want to customize the decoding process to handle custom data types or to modify the way certain data types are decoded.
+
+👨‍💻 To customize the decoding process, we can subclass the `JSONDecoder` class and override its `decode()` method. Here's an example:
+
+
+In this example, we've created a custom decoder that can handle JSON data with a `"date"` field and convert it to a `datetime` object. We've achieved this by subclassing the `JSONDecoder` class and overriding its `decode()` method. Inside the `decode()` method, we first decode the JSON string using the default decoder by calling `super().decode(json_string)`. We then modify the decoded object as needed and return it.
+
+👍 With this custom decoder, we can now use the `json.loads()` method to decode JSON data using our custom decoder:
+

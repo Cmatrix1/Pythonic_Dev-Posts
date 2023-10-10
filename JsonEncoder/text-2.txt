@@ -1,0 +1,17 @@
+`json.loads()` Method In Python and `JSONDecoder` Class In Python.
+
+`json.loads()`: It is a method in the `json` module that is used to decode JSON data into Python objects. It takes a JSON string as input and returns a Python object that represents the decoded data. However, the `json.loads()` method also provides several optional arguments that can be used to customize the decoding process.
+
+`JSONDecoder` : It is a class in the `json` module that is used to decode JSON data into Python objects. By default, it can decode JSON data into Python dictionaries, lists, strings, numbers, booleans, and `None`. However, sometimes we may want to customize the decoding process to handle custom data types or to modify the way certain data types are decoded.
+
+👨‍💻 Here are the optional arguments that can be passed to the `json.loads()` method:
+
+1. `object_hook`: This argument is a function that can be used to modify the decoded object. It takes a dictionary as input and returns a modified version of the dictionary. For example:
+
+
+2. `parse_float`, `parse_int`, `parse_constant`: These arguments are functions that can be used to customize the decoding of floating-point numbers, integers, and constants (e.g., `null`, `true`, `false`). For example:
+
+3. `cls`: This argument is a class that can be used to customize the decoding process. It should be a subclass of the `JSONDecoder` class. For example:
+
+
+👍 With these optional arguments, we can customize the decoding process of the `json.loads()` method to suit our needs.

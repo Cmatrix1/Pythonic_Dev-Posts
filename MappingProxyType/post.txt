@@ -1,0 +1,11 @@
+MappingProxyType
+
+🗺️ The MappingProxyType is a built-in type in Python that provides a read-only view of a mapping object. It allows you to create a read-only version of a dictionary, which can be useful in situations where you want to prevent accidental modification of the original dictionary.
+
+🤔 So, why would you want to use a MappingProxyType?
+
+1️⃣ Security: If you have a dictionary that contains sensitive information, you may not want to allow anyone to modify it. By creating a MappingProxyType, you can ensure that the original dictionary remains unchanged.
+
+2️⃣ Performance: If you have a large dictionary that you need to pass around to multiple functions, creating a MappingProxyType can be more efficient than creating a copy of the dictionary each time.
+
+3️⃣ Convenience: If you have a dictionary that you want to make available to multiple functions, but you don't want any of those functions to modify the dictionary, creating a MappingProxyType can be a convenient way to achieve this.
