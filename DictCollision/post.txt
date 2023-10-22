@@ -1,0 +1,13 @@
+📢 Hash Collision Performance Effects 🐍
+
+🧐 Explanation
+Python uses hashes to determine the storage and retrieval of keys.
+
+Number class, each instance has a unique hash. As a result, when searching for a specific key, Python can quickly identify the exact bucket containing the desired key.
+
+SameHash class always returns the same hash value, 100, regardless of the x value. Python will use open addressing to find the next available slot in the internal hash table when storing each key-value pair. This process continues until an empty slot is found, ensuring that all keys are stored, even if they have the same hash value.
+
+it takes substantially longer (100x) to look up a value when we have hash collisions.
+✨ In fact this is the reason why Python has randomized hashes for strings, dates, and a few other built in types. If these hashes were predictable it would be easy for an attacker to purposefully provide keys with the same hash to slow down the system in a denial of service attack.
+
+#HashCollision
