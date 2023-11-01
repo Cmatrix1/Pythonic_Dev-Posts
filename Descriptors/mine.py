@@ -49,3 +49,4 @@ print(sadegh.age)
 
 del sadegh
 print(ali.age)
+
