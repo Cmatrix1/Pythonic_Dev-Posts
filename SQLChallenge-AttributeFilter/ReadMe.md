@@ -110,11 +110,11 @@ product_attributes
     "attribute_title_fa": "عرض",
     "values": [
         {
-            "id": 1,
+            "id": 3,
             "value": "20"
         },
         {
-            "id": 2,
+            "id": 4,
             "value": "30"
         }
     ]
