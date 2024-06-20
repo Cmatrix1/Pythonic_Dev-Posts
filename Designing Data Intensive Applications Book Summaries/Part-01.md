@@ -4,7 +4,12 @@
 
 اخیرا شروع به خوندن کتاب `Designing Data-Intensive Applications` کردم و قصد دارم بعد از مطالعه هر فصل یک خلاصه ای از اون رو در قالب یک پست یا مقاله جا بدم 
 
+## Why data systems? 
+وچود دیتا سیستم ها برای ما ضروری هستن چون امروزه اپلیکیشنن ها با دیتاهای زیاد و پیچیده ای سر و کار دارن
+که نیازمند فانکشنالیتی های مختلفی هستن. در واقع به احتمال بیشتر یک سناریوی `data-intensive`وجود داره نه `compute-intensive`.
+
 یک اپلیکشن باید `requirement` های زیادی رو داشته باشه تا بتونه خوب عمل بکنه 
+و یک ابزار یا تکنولوژی لزوما نمیتونه پاسخگوی همه نیاز ها باشه.
 
 `functional requirements`  : به معنای کاری که باید انجام بشه مثل ذخیره دیتا ، برگردوندن دیتا ، سرچ کردن و ...
 
@@ -14,9 +19,9 @@
 داخل فصل اول ما بصورت کامل راجب `reliability`, `scalability`, `maintainability` صحبت میکنیم
 
 ## Reliability
-یعنی ما سییستم رو به شکلی طراحی بکنیم  که بصورت درست کار کنه حتی وقتی که خطا (fualts) رخ بده 
+یعنی ما سییستم رو به شکلی طراحی بکنیم  که بصورت درست کار کنه حتی وقتی که خطا (fault) رخ بده 
 
-اگر بخوام مفهوم خطا یا همون (fualts) رو شفاف تر توضیح بدم 
+اگر بخوام مفهوم خطا یا همون (fault) رو شفاف تر توضیح بدم 
 
  خطا یک Error یا نقص در یک برنامه است که باعث ایجاد نتایج نادرست یا غیرمنتظره می شود.
 
@@ -83,7 +88,7 @@ Queueing delays often account for large part of the response times at high perce
 When generating load artificially, the client needs to keep sending requests independently of the response time.
 
 > ##### Percentiles in practice
-> Calls in parallel, the end-user request still needs to wait for the slowest of the parallel calls to complete.
+> Even with parallel calls, the end-user request still needs to wait for the slowest call to complete.
 > The chance of getting a slow call increases if an end-user request requires multiple backend calls.
 
 #### Approaches for coping with load
@@ -105,16 +110,16 @@ Distributing stateless services across multiple machines is fairly straightforwa
 ### Operability: making life easy for operations
 A good operations team is responsible for
 
-- Monitoring and quickly restoring service if it goesinto bad state
+- Monitoring and quickly restoring service if it goes into bad state
 - Tracking down the cause of problems
 - Keeping software and platforms up to date
 - Keeping tabs on how different systems affect each other
 - Anticipating future problems
 - Establishing good practices and tools for development
-- Perform complex maintenance tasks, like platformmigration
+- Perform complex maintenance tasks, like platform migration
 - Maintaining the security of the system
 - Defining processes that make operations predictable
-- Preserving the organisation's knowledge about thesystem
+- Preserving the organisation's knowledge about the system
 
 Good operability means making routine tasks easy. allowing the operations team to focus their efforts on high-value activities. Data systems can do various things to make routine tasks easy, including:
 
@@ -132,12 +137,12 @@ over the system state when needed
 ### Simplicity: managing complexity
 When complexity makes maintenance hard, budget and schedules are often overrun. There is a greater risk of introducing bugs.
 
-Making a system simpler means removing accidental complexity, as non inherent in the problem that the software solves (as seen by users).
+Making a system simpler means removing accidental complexity, as non-inherent in the problem that the software solves (as seen by users).
 
 One of the best tools we have for removing accidental complexity is abstraction that hides the implementation details behind clean and simple to understand APIs and facades.
 
 ### Evolvability: making change easy
-It’s extremely unlikely that your system’s requirements will remain unchanged for ever. They are much more likely to be in constant flux: you learn new facts, previously unanticipated use cases emerge, business priorities change, users request new features etc.
+It’s extremely unlikely that your system’s requirements will remain unchanged forever. They are much more likely to be in constant flux: you learn new facts, previously unanticipated use cases emerge, business priorities change, users request new features etc.
 
 In terms of organizational processes, Agile working patterns provide a framework for adapting to change. The Agile community has also developed technical tools and pat
 terns that are helpful when developing software in a frequently changing environment, such as test-driven development (TDD) and refactoring.
