@@ -9,7 +9,7 @@ This repository contains the posts that I write on my Telegram channel. Each pos
 To access the posts, simply clone the repository to your local machine:
 
 ```
-git clone https://github.com/your-username/telegram-channel-posts.git
+git clone https://github.com/Cmatrix1/Pythonic_Dev-Posts
 ```
 
 You can then navigate to the repository directory and view the posts in your preferred text editor.
